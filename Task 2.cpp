@@ -1,17 +1,21 @@
 #include <iostream>
 
-int main()
+int main() 
 {
-	int a, b, c, d;
+	double number1;
+	double number2;
+	char symbol;
 
-	std::cin >> a >> b >> c >> d;
+	std::cin >> number1;
+	std::cin >> number2;
+	std::cin >> symbol;
 
-	double denom = (c * c + d * d) * 1.00;
-
-	double ReResult = (a * c + b * d) / denom;
-	double ImResult = (b * c - a * d) / denom;
-
-	std::cout << ReResult << "+" << ImResult << "i";
-
+	switch(symbol)
+	{
+	case '+': std::cout << (number1 + number2); break;
+	case '-': std::cout << (number1 - number2); break;
+	case '*': std::cout << (number1 * number2); break;
+	case '/': std::cout << (number1 / number2);
+	}
 	return 0;
 }

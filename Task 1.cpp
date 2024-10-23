@@ -2,15 +2,15 @@
 
 int main()
 {
-	int a, b, c, d;
-	
+	int a;
+	std::cin >> a;
 
-	std::cin >> a >> b >> c >> d;
-
-    int ReResult = (a * c - b * d);
-	int ImResult = (a * d + b * c);
-	
-	std::cout << ReResult << "+" << ImResult << "i";
-
+	if (a % 10 == 1 || a % 10 == 3 || a % 10 == 5 || a % 10 == 7 || a % 10 == 9)
+	{
+		std::cout << "odd";
+	}
+	else {
+		std::cout << "even";
+	}
 	return 0;
 }

@@ -1,18 +1,26 @@
 #include <iostream>
+#include <cmath>
 
 int main()
 {
-	int cheeseburger;
-	int fish_menu;
-	int chiken_wings;
+    double a, b;
+    int radius;
+    std::cin >> a >> b >> radius;
 
-	std::cin >> cheeseburger >> fish_menu >> chiken_wings;
+    double c = radius * sin(45 * 3.14 / 180.0);
 
-	double bill = (8.25 * cheeseburger + 12 * fish_menu + 10.99 * chiken_wings);
-	double dessert = (bill > 60) * (bill * 0.10);
-	double final_bill = bill + dessert + 5.00;
+    if (a + b < c * 2)
+    {
+        std::cout << "Inside the circle";
+    }
+    else if (a + b == c * 2)
+    {
+        std::cout << "On the circle";
+    }
+    else
+    {
+        std::cout << "Outside the circle";
+    }
 
-	std::cout << final_bill << '\n';
-
-	return 0;
+    return 0;
 }
